@@ -19,9 +19,8 @@ let url = window.location.toString();
 					console.log(json.html_url);
 
 					const date = document.getElementById('date');
-					let preloader = document.getElementById('preloader');
 					setTimeout(function() {
-						preloader.classList.add('hidden');}, 2000);
+						classList.add('hidden');}, 2000);
 			
 					let photo = new Image();
 					photo.src = json.avatar_url;
@@ -52,7 +51,7 @@ let url = window.location.toString();
 				let currentDate = new Date();
 				
 				const getDate = new Promise((resolve, reject) => {
-					setTimeout(() => currentDate ? resolve(date.innerHTML = currentDate.toDateString()) : reject('не удалось получить'), 2000);
+					setTimeout(() => currentDate ? resolve(date.innerHTML = currentDate.toDateString()) : reject('Not found'), 2000);
 				})
 
 				const renderCard = function(obj) {
